@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Main } from "./components/Main";
 import { Login } from "./components/Login";
 import firebase from "./firebase";
-import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
 
 
@@ -27,7 +26,6 @@ function App() {
           ) : (
             <Route exact path="/" element={<Login />} />
           )}
-          <Route path="/user" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>

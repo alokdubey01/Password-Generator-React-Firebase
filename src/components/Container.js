@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { copyToClipBoard, generatePassword, setPasswordLength } from "../utils";
 import { CheckBox } from "./Helper/ChechBox";
-import { Modal } from "./Helper/Modal";
 import { Slider } from "./Helper/Slider";
 
 const CHECKBOX_LIST = [
@@ -42,7 +41,6 @@ export const Container = (props) => {
     numbers: true,
   });
   const [checked, setChecked] = useState(false);
-  const [show, setshow] = useState(false);
   const [checkedName, setCheckedName] = useState("");
   const [minMaxValue, setMinMaxValue] = useState({
     min: 1,
