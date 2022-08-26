@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.password-display-container {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background-color: #cb473e;
+  display: flex;
+  position: relative;
+  max-width: 1100px;
+  height: 150px;
+  margin: 0 auto 10px;
+}
+
+.password-display {
+  width: 100%;
+  max-width: auto;
+  border: 0;
+  color: white;
+  font-size: 1.4rem;
+  text-align: left;
+  padding-left: 5px;
+  height: 100%;
+  line-height: 150px;
+}
+
+.password-display-input {
+  background-color: inherit;
+  border: none !important;
+  outline: none !important;
+}
+
+.password-display-input::selection {
+  background: none;
+}
+
+.password-description {
+  margin-top: -40px;
+  margin-left: 6px;
+  color: white;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.fas {
+  color: white;
+}
+
+.password-display-icons {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: auto;
+  height: auto;
+  line-height: 100px;
+  padding: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-right: -15px;
+}
+
+.password-type {
+  position: relative;
+  display: flex;
+}
+
+.copy-btn {
+  border: none;
+  background: none;
+  font-size: 25px;
+  color: white;
+  outline: none !important;
+}
+
+.generate-btn {
+  border: none;
+  background: none;
+  font-size: 25px;
+  color: white;
+  outline: none !important;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-bubble {
+  min-width: 120px;
+  max-width: 210px;
+  position: absolute;
+  z-index: 10;
+}
+
+.tooltip-bubble::after {
+  content: "";
+  position: absolute;
+}
+
+.tooltip-top {
+  bottom: 100%;
+  left: 50%;
+  padding-bottom: 9px;
+  transform: translateX(-50%);
+}
+
+.tooltip-top::after {
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-bottom {
+  top: 100%;
+  left: 50%;
+  padding-top: 9px;
+  transform: translateX(-50%);
+}
+
+.tooltip-bottom::after {
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #fff;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-left {
+  top: 50%;
+  right: 100%;
+  padding-right: 9px;
+  transform: translateY(-50%);
+}
+
+.tooltip-left::after {
+  border-left: 9px solid rgba(0, 0, 0, 0.5);
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.tooltip-right {
+  top: 50%;
+  left: 100%;
+  padding-left: 9px;
+  transform: translateY(-50%);
+}
+
+.tooltip-right::after {
+  border-right: 9px solid rgba(0, 0, 0, 0.5);
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.tooltip-message {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding: 0.75em;
+  text-align: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.password-settings {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: -10px auto 15px;
+  padding: 25px;
+}
+
+.password-settings h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.password-btn {
+  background-color: #4aa1f3;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.slider-container {
+  margin-bottom: 50px;
+}
+
+.slider {
+  width: 100%;
+}
+
+.range-slider {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 10px;
+  border-radius: 5px;
+  background: #e7e7e7;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .range-slider {
+    width: 85%;
+  }
+}
+
+.range-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2563eb;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.range-slider:active::-webkit-slider-thumb {
+  background: #2563eb;
+}
+
+.range-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+::-moz-range-track {
+  background: #fff;
+  border: 0;
+}
+
+.range-slider-value {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: #2563eb;
+  padding: 5px 10px;
+  margin-left: 12px;
+}
+
+.range-slider-value:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #2563eb;
+  border-bottom: 7px solid transparent;
+  content: "";
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox */
+
+.checkbox-container {
+  margin: 0 auto;
+  text-align: center;
+  bottom: 10px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  width: 80%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container h1 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* Hide the browser's default checkbox */
+.container .checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  float: right;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2563eb;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 10px;
+  top: 7px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
