@@ -10,18 +10,21 @@ export const Header = (props) => {
   return (
     <div>
       <nav
-        className="absolute right-2 top-2 z-30"
+        className="fixed right-2 top-2 z-30"
         style={{ background: "transparent", display: "flex" }}
       >
         <Avatar alt={props.alt} src={props.src} />
-        <button className="mt-1 text-xs ml-2 inline-flex items-center px-3 py-0 text-white transition bg-gray-800 rounded-full shadow-lg focus:outline-none focus:ring focus:ring-yellow-400 hover:bg-gray-800" onClick={logOut}>
+        <button
+          className="mt-1 text-xs ml-2 inline-flex items-center px-0 py-0 text-black"
+          onClick={logOut}
+        >
           logOut
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={2}
-            stroke="white"
+            stroke="black"
             className="w-4 h-4"
           >
             <path

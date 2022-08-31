@@ -45,7 +45,7 @@ export const Slider = (props) => {
         <input
           type="text"
           readOnly
-          class="bg-gray-100 text-center rounded text-sm w-16 ml-3 p-1 px-2 mr-4 border focus:outline-none focus:border-blue-500"
+          className="bg-gray-100 text-center rounded text-sm w-16 ml-3 p-1 px-2 mr-4 border focus:outline-none focus:border-blue-500"
           value={progressValue}
         />
       </div>

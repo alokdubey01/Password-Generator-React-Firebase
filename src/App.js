@@ -8,42 +8,27 @@ import { Header } from "./components/Header";
 
 function App() {
   const [user, setUser] = React.useState(null);
-  const [loading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
-    setLoading(true);
     firebase.auth().onAuthStateChanged((user) => {
       setUser(user);
       localStorage.setItem("user", user.uid);
-      setLoading(false);
     });
   }, []);
+  
   return (
     <div className="App">
-      {loading ? (
-        <div style={{ background: "#222", height: "100vh", width: "100wh" }}>
-          <div id="load">
-            <div>G</div>
-            <div>N</div>
-            <div>I</div>
-            <div>D</div>
-            <div>A</div>
-            <div>O</div>
-            <div>L</div>
-          </div>
-        </div>
-      ) : (
-        <Router>
-          {user ? <Header alt={user.displayName} src={user.photoURL} /> : ""}
-          <Routes>
-            {user ? (
+      <Router>
+      {user ? <Header alt={user.displayName} src={user.photoURL} /> : ""}
+        <Routes>
+        <Route path='/login' element={<Login/>}/>
+        {user ? (
               <Route exact path="/" element={<Main user={user} />} />
             ) : (
               <Route exact path="/" element={<Login />} />
             )}
-          </Routes>
-        </Router>
-      )}
+      </Routes>
+      </Router>
     </div>
   );
 }

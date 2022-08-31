@@ -106,7 +106,10 @@ export const Main = ({ user }) => {
                       onChange={(e) => setPlatform(e.target.value)}
                     />
                   </div>
-                  <button className="px-3 py-3 bg-blue-700 dark:bg-blue-600 focus:outline-none hover:bg-opacity-80 ml-2 rounded" onClick={Push}>
+                  <button
+                    className="px-3 py-3 bg-blue-700 dark:bg-blue-600 focus:outline-none hover:bg-opacity-80 ml-2 rounded"
+                    onClick={Push}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -123,7 +126,7 @@ export const Main = ({ user }) => {
                 </div>
                 <div
                   className="bg-gray-50 border rounded border-gray-200 dark:border-gray-700 dark:bg-gray-700 w-full"
-                    style={{ display: "none" }}
+                  style={{ display: "none" }}
                 >
                   <input
                     ref={passwordRef}
@@ -275,11 +278,19 @@ export const Main = ({ user }) => {
             </thead>
             <tbody className="text-gray-600 text-sm font-light">
               {todoList
-                ? todoList.map((todo, index) => (
-                    <tr className="border-b border-gray-200 hover:bg-gray-100">
-                      <td className="py-3 px-6 text-left whitespace-nowrap">
+                && todoList.map((todo, index) => (
+                    <tr
+                      className="border-b border-gray-200 hover:bg-gray-100"
+                      key={index}
+                    >
+                      <td
+                        className="py-3 px-6 text-left whitespace-nowrap"
+                        key={index}
+                      >
                         <div className="flex items-center">
-                          <span className="font-medium capitalize">{todo.platform}</span>
+                          <span className="font-medium capitalize">
+                            {todo.platform}
+                          </span>
                         </div>
                       </td>
                       <td className="py-3 px-6 text-left">
@@ -327,8 +338,7 @@ export const Main = ({ user }) => {
                         </div>
                       </td>
                     </tr>
-                  ))
-                : ""}
+                  ))}
             </tbody>
           </table>
         </div>
